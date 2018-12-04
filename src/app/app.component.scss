@@ -1,0 +1,27 @@
+main {
+  padding: 60px 15px;
+}
+
+.knuut-bg-primary {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+
+  &.light {
+    background-color: #1ca4fc;
+  }
+
+  &.normal {
+    background-color: #497aad;
+  }
+
+  &.dark {
+    background-color: #094e7d;
+  }
+}
+
+a.nav-link {
+  color: white;
+}
+
+footer {
+  margin-top: 0;
+}

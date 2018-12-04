@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12">
+    <div class="input-group input-group-lg">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="inputGroup-sizing-lg">FI-</span>
+      </div>
+      <input #box class="form-control" (keyup)='getPostCode(box.value)'>
+    </div>
+  </div>
+  <div class="col-6 mt-5">
+    <p><span [innerHTML]="zipCode?.code"></span>&nbsp;<span [innerHTML]="zipCode?.codeFI"></span><br>
+      <span [innerHTML]="zipCode?.areaFI"></span></p>
+  </div>
+  <div class="col-6 mt-5">
+    <p><span [innerHTML]="zipCode?.code"></span>&nbsp;<span [innerHTML]="zipCode?.codeSV"></span><br>
+      <span [innerHTML]="zipCode?.areaSV"></span></p>
+  </div>
+</div>
