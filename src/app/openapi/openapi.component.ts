@@ -11,7 +11,7 @@ export class OpenapiComponent implements AfterViewInit, OnInit {
 
   ngAfterViewInit() {
     const ui = SwaggerUI({
-      url: "./postalcodes.json",
+      url: "https://postinumerot.com/postalcodes.json",
       domNode: this.el.nativeElement.querySelector(".OA-container"),
       deepLinking: true,
       presets: [SwaggerUI.presets.apis]
