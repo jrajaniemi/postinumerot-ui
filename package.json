@@ -27,6 +27,7 @@
     "buffer": "^5.2.1",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
+    "express": "^4.16.4",
     "font-awesome": "^4.7.0",
     "rxjs": "~6.3.3",
     "rxjs-compat": "^6.3.3",
