@@ -6,6 +6,7 @@
     "start": "ng serve",
     "build": "ng build",
     "deploy": "ng build --prod ; scp -r -i ~/Downloads/dsn.pem dist/ng-postinumerot/* ubuntu@ec2-54-171-52-8.eu-west-1.compute.amazonaws.com:/var/www/com/postinumerot/",
+    "postinstall": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -35,8 +36,8 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.11.0",
-    "@angular/cli": "~7.1.0",
-    "@angular/compiler-cli": "~7.1.0",
+    "@angular/cli": "^7.1.3",
+    "@angular/compiler-cli": "^7.1.3",
     "@angular/language-service": "~7.1.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
