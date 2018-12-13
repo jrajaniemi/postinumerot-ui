@@ -1,10 +1,10 @@
-//Install express server
+// Alusta express server
 const express = require('express');
 const path = require('path');
 
 const app = express();
 
-// Serve only the static files form the dist directory
+// jaellaan staattisia tiedostoja ./dist/ng-postinumerot/ -kansiosta
 app.use(express.static('./dist/ng-postinumerot'));
 
 app.get('/*', function(req,res) {
@@ -12,5 +12,5 @@ app.get('/*', function(req,res) {
 res.sendFile(path.join(__dirname,'/dist/ng-postinumerot/index.html'));
 });
 
-// Start the app by listening on the default Heroku port
+// laitetaan 8080-portti kuunteluun
 app.listen(process.env.PORT || 8080);
