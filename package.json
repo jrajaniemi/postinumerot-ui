@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "deploy": "ng build --prod ; scp -r -i ~/Downloads/dsn.pem dist/ng-postinumerot/* ubuntu@ec2-54-171-52-8.eu-west-1.compute.amazonaws.com:/var/www/com/postinumerot/",
     "postinstall": "ng build --aot --prod",
