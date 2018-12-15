@@ -8,7 +8,7 @@
     }
   },
   "servers": [{
-    "url": "https://postinumerot.com/api/v1/"
+    "url": "https://api.postinumerot.com/v1/"
   }],
   "paths": {
     "/": {
@@ -98,10 +98,15 @@
           "type": {
             "type": "integer",
             "format": "int32",
-            "description":"
-              1 = Normaalipostinumero, 2 = Postilokeropostinumero, 3 = Yrityspostinumero,
-              4 = Koontipalvelupostinumero, 5 = Vastauslähetyspostinumero, 6 = SmartPOST (pakettiautomaatti),
-              7 = Noutopiste, 8 = Tekninen postinumero"
+            "description": "
+            1 = Normaalipostinumero,
+            2 = Postilokeropostinumero,
+            3 = Yrityspostinumero,
+            4 = Koontipalvelupostinumero,
+            5 = Vastauslähetyspostinumero,
+            6 = SmartPOST(pakettiautomaatti),
+            7 = Noutopiste,
+            8 = Tekninen postinumero "
           }
         }
       },
