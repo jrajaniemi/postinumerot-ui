@@ -1,6 +1,10 @@
 {
   "name": "ng-postinumerot",
   "version": "0.0.0",
+  "engines": {
+    "node": "9.11.1",
+    "npm": "6.5.0"
+  },
   "scripts": {
     "ng": "ng",
     "start": "node server.js",
