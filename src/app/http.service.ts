@@ -9,10 +9,10 @@ export class HttpService {
   constructor(private httpClient: HttpClient) {}
 
   getAll(): Observable<any> {
-    return this.httpClient.get("https://postinumerot.com/api/v1/")
+    return this.httpClient.get("https://api.postinumerot.com/v1/")
   }
 
   getPostCode(zip: string): Observable<any> {
-    return this.httpClient.get(`https://postinumerot.com/api/v1/${zip}`)
+    return this.httpClient.get(`https://api.postinumerot.com/v1/${zip}`)
   }
 }
