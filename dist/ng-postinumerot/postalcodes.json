@@ -1,0 +1,123 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Finnish postal codes",
+    "license": {
+      "name": "MIT"
+    }
+  },
+  "servers": [{
+    "url": "https://postinumerot.com/api/v1/"
+  }],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Get all finnish postal codes",
+        "operationId": "getAllPostalCodes",
+        "tags": [
+          "codes"
+        ],
+        "responses": {
+          "200": {
+            "description": "Show all finnish Postal codes",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Codes"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{code}": {
+      "get": {
+        "summary": "More info for a specific postal code",
+        "operationId": "showPostalCode",
+        "tags": [
+          "code"
+        ],
+        "parameters": [{
+          "name": "code",
+          "in": "path",
+          "required": true,
+          "description": "The postal names of the postal code to retrieve",
+          "schema": {
+            "type": "string"
+          }
+        }],
+        "responses": {
+          "200": {
+            "description": "Expected response to a valid request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Code"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "unexpected error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Code": {
+        "required": [
+          "zip"
+        ],
+        "properties": {
+          "code": {
+            "type": "string"
+          },
+          "codeFI": {
+            "type": "string"
+          },
+          "codeSV": {
+            "type": "string"
+          },
+          "areaFI": {
+            "type": "string"
+          },
+          "areaSV": {
+            "type": "string"
+          },
+          "type": {
+            "type": "integer",
+            "format": "int32",
+            "description":"
+              1 = Normaalipostinumero, 2 = Postilokeropostinumero, 3 = Yrityspostinumero,
+              4 = Koontipalvelupostinumero, 5 = Vastauslähetyspostinumero, 6 = SmartPOST (pakettiautomaatti),
+              7 = Noutopiste, 8 = Tekninen postinumero"
+          }
+        }
+      },
+      "Codes": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Code"
+        }
+      },
+      "Error": {
+        "properties": {
+          "error": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}
