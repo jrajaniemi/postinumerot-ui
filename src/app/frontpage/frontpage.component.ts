@@ -46,7 +46,7 @@ export class FrontpageComponent implements OnInit {
       this.rest.getPostCode(code).subscribe(
         data => {
           this.zipCode = data
-          console.log(data)
+          // console.log(data)
         },
         err => {
           console.error(err)
