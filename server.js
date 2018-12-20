@@ -8,8 +8,11 @@ const app = express();
 app.use(express.static('./dist/ng-postinumerot'));
 app.use(cors());
 
-app.get('/*', function (req, res) {
+app.get('/postalcodes.json', function (req, res) {
+  res.sendFile(path.join(__dirname, '/dist/ng-postinumerot/postalcodes.json'));
+});
 
+app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, '/dist/ng-postinumerot/index.html'));
 });
 
