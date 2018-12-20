@@ -9,7 +9,7 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "deploy": "ng build --prod ; scp -r -i ~/Downloads/dsn.pem dist/ng-postinumerot/* ubuntu@ec2-54-171-52-8.eu-west-1.compute.amazonaws.com:/var/www/com/postinumerot/",
+    "deploy": "ng build --prod ; scp -r -i ~/Downloads/dsn.pem dist/ng-postinumerot/* ec2-63-32-41-224.eu-west-1.compute.amazonaws.com:/var/www/com/postinumerot/",
     "postinstall": "ng build --aot --prod",
     "test": "ng test",
     "lint": "ng lint",
