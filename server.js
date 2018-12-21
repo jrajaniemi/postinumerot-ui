@@ -3,6 +3,9 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 const cors = require('cors');
+const helmet = require('helmet');
+const sanitizer = require('sanitize')();
+
 
 const app = express();
 
@@ -11,6 +14,9 @@ app.use(express.static('./dist/ng-postinumerot'));
 
 // CORS-käyttöön
 app.use(cors());
+
+// Helmet-kirjasto käyttöön
+app.use(helmet());
 
 // HTTP -> HTTPS 301
 app.use((req, res, next) => {
