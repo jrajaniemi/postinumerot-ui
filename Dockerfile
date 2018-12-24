@@ -14,7 +14,7 @@ WORKDIR /usr/src/app
 # RUN npm cache clean --force
 # RUN npm run build
 # Bundle app source
-COPY ./dist/postinumerot-ui/ .
+COPY ./dist/ng-postinumerot/ .
 
 EXPOSE 8080
 CMD [ "npm", "start" ]
