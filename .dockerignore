@@ -2,4 +2,3 @@
 ./e2e
 ./ts*
 ./angular.json
-./*.node_modules
